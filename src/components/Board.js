@@ -10,7 +10,7 @@ export default class Board extends Component {
         return (
             <table className="chess-board">
             <tbody>
-                {ranks.reverse().map(r => <tr key={i/8}>{files.map(f => <td key={i%8}><Square key={i++} file={f} rank={r}/></td>)}</tr>)}
+                {ranks.reverse().map(r => <tr key={"row" + r.toString()}>{files.map(f => <td key={f+r.toString()}><Square key={i++} file={f} rank={r}/></td>)}</tr>)}
             </tbody>
             </table>
         );
