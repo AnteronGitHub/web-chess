@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Square from '../components/Square';
+import Board from '../components/Board';
 
 class Root extends Component {
   render() {
     return (
-      <Square />
+      <Board />
     );
   }
 }
