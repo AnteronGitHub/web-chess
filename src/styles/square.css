@@ -2,8 +2,16 @@
 .square {
     width: 64px;
     height: 64px;
-    background-color: black;
-    color: white;
     text-align: center;
     line-height: 64px;
+}
+
+.square.black {
+    background-color: black;
+    color: white;
+}
+
+.square.white {
+    background-color: white;
+    color: black;
 }
