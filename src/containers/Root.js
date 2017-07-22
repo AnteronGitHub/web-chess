@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Square from '../components/Square';
 
 class Root extends Component {
   render() {
     return (
-      <h1>Check mate ;P</h1>
+      <Square />
     );
   }
 }
