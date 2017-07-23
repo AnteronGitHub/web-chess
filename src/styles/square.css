@@ -19,3 +19,8 @@
 .square.selected {
     color: red;
 }
+
+.square.threatened {
+    background-color: red;
+    color: white;
+}

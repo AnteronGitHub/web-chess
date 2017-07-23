@@ -15,6 +15,12 @@ export default class Root extends Component {
     return this.state.gameClient.getStatus().board.getSquare(square).piece;
   }
 
+  getThreatenedSquares() {
+    return this.state.gameClient.validMoves
+            .filter(move => move.src.file+move.src.rank===this.state.selectedSquare)
+            .map(move => move.squares)
+  }
+
   handleClick(square) {
     if(square === this.state.selectedSquare) {
       this.setState({
@@ -46,7 +52,11 @@ export default class Root extends Component {
 
   render() {
     return (
-      <Board squares={this.state.gameClient.getStatus().board.squares} selected={this.state.selectedSquare} handleClick={square => this.handleClick(square)} />
+      <Board 
+        squares={this.state.gameClient.getStatus().board.squares} 
+        selected={this.state.selectedSquare} 
+        threatenedSquares={this.getThreatenedSquares()}
+        handleClick={square => this.handleClick(square)} />
     );
   }
 }

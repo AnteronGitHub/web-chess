@@ -22,7 +22,8 @@ export default class Board extends Component {
                                 file={f} 
                                 rank={r} 
                                 piece={this.getPiece(f, r)} 
-                                selected={this.props.selected && this.props.selected.startsWith(f+r)} />
+                                selected={this.props.selected && this.props.selected.startsWith(f+r)}
+                                threatened={typeof this.props.threatenedSquares[0] !== "undefined" ? this.props.threatenedSquares[0].filter(square => square.file===f && square.rank === r).length : false} />
                         </td>)}
                     </tr>)}
             </tbody>
