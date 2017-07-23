@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import Square from './Square'
+import '../styles/board.css'
 
 export default class Board extends Component {
     files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
