@@ -11,8 +11,21 @@ export default class Root extends Component {
     }
   }
 
+  getPiece(square) {
+    return this.state.gameClient.getStatus().board.getSquare(square).piece;
+  }
+
   handleClick(square) {
-    if(!this.state.selectedSquare)
+    if(square === this.state.selectedSquare) {
+      this.setState({
+        gameClient: this.state.gameClient,
+        selectedSquare: null
+      });
+      return;
+    }
+    const selectedPiece = this.getPiece(square);
+    if(selectedPiece 
+        && selectedPiece.side.name === this.state.gameClient.game.getCurrentSide().name) 
       this.setState({
         gameClient: this.state.gameClient,
         selectedSquare: square
