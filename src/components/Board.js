@@ -16,7 +16,7 @@ export default class Board extends Component {
         return (
             <table className="chess-board">
             <tbody>
-                {ranks.reverse().map(r => <tr key={"row" + r.toString()}>{files.map(f => <td key={f+r.toString()}><Square key={i++} file={f} rank={r} piece={this.getPiece(f, r)}/></td>)}</tr>)}
+                {ranks.reverse().map(r => <tr key={"row" + r.toString()}>{files.map(f => <td key={f+r.toString()} onClick={() => this.props.handleClick(f+r)}><Square key={i++} file={f} rank={r} piece={this.getPiece(f, r)} /></td>)}</tr>)}
             </tbody>
             </table>
         );
