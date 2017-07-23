@@ -8,4 +8,8 @@ Software used in this project:
 
 - https://www.lucidchart.com/ : Diagrams
 
+Graphics:
+
+- https://opengameart.org/content/tux-chess-pieces : Piece Spritesheet
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
