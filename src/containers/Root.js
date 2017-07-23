@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Board from '../components/Board';
 import Chess from 'chess'
 
-class Root extends Component {
+export default class Root extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -37,5 +37,3 @@ class Root extends Component {
     );
   }
 }
-
-export default Root;
