@@ -33,7 +33,7 @@ export default class Root extends Component {
 
   render() {
     return (
-      <Board status={this.state.gameClient.getStatus().board.squares} handleClick={square => this.handleClick(square)} />
+      <Board squares={this.state.gameClient.getStatus().board.squares} selected={this.state.selectedSquare} handleClick={square => this.handleClick(square)} />
     );
   }
 }

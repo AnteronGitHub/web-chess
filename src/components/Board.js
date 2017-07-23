@@ -7,7 +7,7 @@ export default class Board extends Component {
     ranks = [1, 2, 3, 4, 5, 6, 7, 8];
 
     getPiece(f, r) {
-        return this.props.status[this.ranks.indexOf(r)* 8 + this.files.indexOf(f)].piece;
+        return this.props.squares[this.ranks.indexOf(r)* 8 + this.files.indexOf(f)].piece;
     }
 
     render() {
@@ -18,7 +18,11 @@ export default class Board extends Component {
                     <tr key={"tr" + r.toString()}>
                         {this.files.map(f => 
                         <td key={"td"+f+r.toString()} onClick={() => this.props.handleClick(f+r)}>
-                            <Square key={f+r.toString()} file={f} rank={r} piece={this.getPiece(f, r)} />
+                            <Square key={f+r.toString()} 
+                                file={f} 
+                                rank={r} 
+                                piece={this.getPiece(f, r)} 
+                                selected={this.props.selected && this.props.selected.startsWith(f+r)} />
                         </td>)}
                     </tr>)}
             </tbody>
