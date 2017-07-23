@@ -11,15 +11,14 @@ export default class Board extends Component {
     }
 
     render() {
-        var i = 0;  // key index
         return (
             <table className="chess-board">
             <tbody>
                 {this.ranks.slice().reverse().map(r => 
-                    <tr key={"row" + r.toString()}>
+                    <tr key={"tr" + r.toString()}>
                         {this.files.map(f => 
-                        <td key={f+r.toString()} onClick={() => this.props.handleClick(f+r)}>
-                            <Square key={i++} file={f} rank={r} piece={this.getPiece(f, r)} />
+                        <td key={"td"+f+r.toString()} onClick={() => this.props.handleClick(f+r)}>
+                            <Square key={f+r.toString()} file={f} rank={r} piece={this.getPiece(f, r)} />
                         </td>)}
                     </tr>)}
             </tbody>
