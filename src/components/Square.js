@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import '../styles/square.css';
+import '../styles/piece.css';
 
 export default class Square extends Component {
     isWhite() {
@@ -11,7 +12,9 @@ export default class Square extends Component {
 
     render() {
         return (
-            <div className={"square " + ((this.isWhite() ? "white" : "black")) + (this.props.selected ? " selected" : "") + (this.props.threatened ? " threatened" : "") + (this.props.piece ? " " +this.props.piece.type : "")}/>
+            <div className={"square " + ((this.isWhite() ? "white" : "black")) + (this.props.selected ? " selected" : "") + (this.props.threatened ? " threatened" : "")}>
+                <div className={"piece" + (this.props.piece ? " " + this.props.piece.type : "")}/>
+            </div>
         );
     }
 }

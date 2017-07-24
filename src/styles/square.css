@@ -3,37 +3,7 @@
     width: 64px;
     height: 64px;
     text-align: center;
-    line-height: 64px;
-}
-
-.square.pawn {
-    background: transparent url(./spritesheet.png) -0px -95px;
-    background-size: 435px;
-}
-
-.square.knight {
-    background: transparent url(./spritesheet.png) -55px -18px;
-    background-size: 435px;
-}
-
-.square.bishop {
-    background: transparent url(./spritesheet.png) -110px -23px;
-    background-size: 435px;
-}
-
-.square.rook {
-    background: transparent url(./spritesheet.png) 0px -18px;
-    background-size: 410px;
-}
-
-.square.queen {
-    background: transparent url(./spritesheet.png) -150px -18px;
-    background-size: 410px;
-}
-
-.square.king {
-    background: transparent url(./spritesheet.png) -200px -18px;
-    background-size: 410px;
+    /*line-height: 64px;*/
 }
 
 .square.white {
