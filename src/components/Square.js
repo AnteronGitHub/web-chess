@@ -13,7 +13,7 @@ export default class Square extends Component {
     render() {
         return (
             <div className={"square " + ((this.isWhite() ? "white" : "black")) + (this.props.selected ? " selected" : "") + (this.props.threatened ? " threatened" : "")}>
-                <div className={"piece" + (this.props.piece ? " " + this.props.piece.type : "")}/>
+                <div className={"piece" + (this.props.piece ? " " + this.props.piece.type + "-" + this.props.piece.side.name : "")}/>
             </div>
         );
     }

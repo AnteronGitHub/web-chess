@@ -7,32 +7,62 @@
     margin-left: 7px;
 }
 
-.piece.pawn {
+.piece.pawn-white {
+    background: transparent url(./spritesheet_blue.png) -5px -95px;
+    background-size: 435px;
+}
+
+.piece.knight-white {
+    background: transparent url(./spritesheet_blue.png) -65px -18px;
+    background-size: 435px;
+}
+
+.piece.bishop-white {
+    background: transparent url(./spritesheet_blue.png) -115px -23px;
+    background-size: 435px;
+}
+
+.piece.rook-white {
+    background: transparent url(./spritesheet_blue.png) -5px -18px;
+    background-size: 410px;
+}
+
+.piece.queen-white {
+    background: transparent url(./spritesheet_blue.png) -155px -18px;
+    background-size: 410px;
+}
+
+.piece.king-white {
+    background: transparent url(./spritesheet_blue.png) -205px -18px;
+    background-size: 410px;
+}
+
+.piece.pawn-black {
     background: transparent url(./spritesheet.png) -5px -95px;
     background-size: 435px;
 }
 
-.piece.knight {
+.piece.knight-black {
     background: transparent url(./spritesheet.png) -65px -18px;
     background-size: 435px;
 }
 
-.piece.bishop {
+.piece.bishop-black {
     background: transparent url(./spritesheet.png) -115px -23px;
     background-size: 435px;
 }
 
-.piece.rook {
+.piece.rook-black {
     background: transparent url(./spritesheet.png) -5px -18px;
     background-size: 410px;
 }
 
-.piece.queen {
+.piece.queen-black {
     background: transparent url(./spritesheet.png) -155px -18px;
     background-size: 410px;
 }
 
-.piece.king {
+.piece.king-black {
     background: transparent url(./spritesheet.png) -205px -18px;
     background-size: 410px;
 }
