@@ -5,9 +5,7 @@
   "dependencies": {
     "chess": "^0.2.8",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
-  "devDependencies": {
+    "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
   "scripts": {
