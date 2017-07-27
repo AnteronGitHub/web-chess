@@ -1,5 +1,5 @@
 
-Go play [penguin chess](https://penguinchess.herokuapp.com/) (production build)!
+Go play [penguin chess](https://penguinchess.herokuapp.com/) (development build)!
 
 (note that server runs on [free dyno hours](https://devcenter.heroku.com/articles/free-dyno-hours) so page may take a while to load if it hasn't been requested recently - be patient)
 
