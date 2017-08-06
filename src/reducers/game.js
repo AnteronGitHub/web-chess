@@ -30,7 +30,12 @@ function handleClick(state, square) {
     return state;
 }
 
-export default (state = {client: Chess.createSimple(), selectedSquare: null}, action) => {
+const initialState = {
+    client: Chess.createSimple(), 
+    selectedSquare: null
+};
+
+export default (state = initialState, action) => {
     switch(action.type) {
         case 'CLICK_SQUARE':
             return handleClick(state, action.square);

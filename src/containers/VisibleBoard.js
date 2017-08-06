@@ -3,14 +3,6 @@ import { connect } from 'react-redux';
 import {clickSquare} from '../actions';
 import Board from '../components/Board';
 
-/**
-    <Board 
-    squares={this.state.gameClient.getStatus().board.squares} 
-    selected={this.state.selectedSquare} 
-    threatenedSquares={this.getThreatenedSquares()}
-    handleClick={square => this.handleClick(square)} />
- */
-
 function getThreatenedSquares(client, selected) {
     return client.validMoves
                 .filter(move => move.src.file+move.src.rank===selected)
