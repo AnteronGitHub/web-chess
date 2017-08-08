@@ -3,7 +3,7 @@ Go play [penguin chess](https://penguinchess.herokuapp.com/) (development build)
 
 (note that server runs on [free dyno hours](https://devcenter.heroku.com/articles/free-dyno-hours) so page may take a while to load if it hasn't been requested recently - be patient)
 
-Simple React ui for chess built using Node.js.
+Simple React chess UI with Redux store.
 
 - node v7.9.0
 - npm v4.2.0
