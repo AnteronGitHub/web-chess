@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import {clickSquare} from '../actions';
-import Board from '../components/Board';
+import Game from '../components/Game';
 
 function getThreatenedSquares(client, selected) {
     return client.validMoves
@@ -11,9 +11,10 @@ function getThreatenedSquares(client, selected) {
 
 const mapStateToProps = state => {
     return {
-        squares: state.client.getStatus().board.squares,
+        status: state.client.getStatus(),
         selected: state.selectedSquare,
-        threatenedSquares: getThreatenedSquares(state.client, state.selectedSquare)
+        threatenedSquares: getThreatenedSquares(state.client, state.selectedSquare),
+        history: state.client.game.moveHistory
     }
 }
 
@@ -28,4 +29,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-) (Board)
+) (Game)

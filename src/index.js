@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import game from './reducers/game';
-import VisibleBoard from './containers/VisibleBoard';
+import GameContainer from './containers/GameContainer';
 
 let store = createStore(game)
 
 ReactDOM.render(
     <Provider store={store}>
-        <VisibleBoard />
+        <GameContainer />
     </Provider>, 
     document.getElementById('root')
 );
