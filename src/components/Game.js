@@ -5,7 +5,7 @@ import Board from './Board';
 export default class Game extends Component {
     printState() {
         if(this.props.status.isCheckmate)
-            return "Check m8 (" + ((this.props.turn-1) % 2 === 1 ? "Blue" : "Red") + " team wins!)"
+            return "Check m8 (" + ((this.props.history.length) % 2 === 1 ? "Blue" : "Red") + " team wins!)"
         if(this.props.status.isCheck)
             return "Check!"
         return (this.props.history.length % 2 === 0 ? "Blue" : "Red") + " team turn."
